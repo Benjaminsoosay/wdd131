@@ -1,0 +1,38 @@
+/* Large screen styles */
+@media (min-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .header-content {
+        padding: 0 2rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .temple-caption h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding: 3rem 2rem;
+    }
+    
+    .gallery {
+        gap: 2.5rem;
+    }
+    
+    .temple-img {
+        height: 300px;
+    }
+}
