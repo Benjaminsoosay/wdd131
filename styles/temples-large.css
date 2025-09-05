@@ -1,0 +1,61 @@
+/* Large screen styles for Temple Album */
+
+/* Responsive gallery layout */
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header-content {
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+
+  .temple-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .temple-caption p {
+    font-size: 1rem;
+  }
+
+  .temple-img {
+    height: 300px;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+
+  .footer-info,
+  .social-links {
+    flex: 1 1 45%;
+    text-align: left;
+  }
+
+  .social-links {
+    text-align: right;
+  }
+}
