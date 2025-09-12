@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris, France - The City of Light</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">Paris</h1>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#culture">Culture</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 480px)" srcset="images/paris-hero-400.webp">
+                <source media="(max-width: 800px)" srcset="images/paris-hero-800.webp">
+                <source media="(min-width: 801px)" srcset="images/paris-hero-1200.webp">
+                <img src="image/paris-hero-800.webp" alt="Eiffel Tower in Paris" class="hero-image">
+            </picture>
+            <div class="hero-content">
+                <h2>The City of Light</h2>
+                <p>Experience the magic of Paris</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Paris</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>Paris, the capital of France, is one of the most iconic and visited cities in the world. Known as the "City of Light" (La Ville Lumière), it's celebrated for its cultural richness, architectural beauty, and historical significance.</p>
+                        <p>Founded in the 3rd century BC by a Celtic tribe called the Parisii, the city has evolved through centuries of history, from Roman conquests to royal reigns and revolutions.</p>
+                        <p>Today, Paris stands as a global center for art, fashion, gastronomy, and culture, attracting millions of visitors each year to its famous landmarks, museums, and charming streets.</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="image/paris-arc.webp" alt="Arc de Triomphe in Paris" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="attractions" class="content-section dark">
+            <div class="container">
+                <h2>Must-See Attractions</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="image/paris-hero-800.webp" alt="Eiffel Tower" loading="lazy">
+                        <h3>Eiffel Tower</h3>
+                        <p>The iconic iron tower built by Gustave Eiffel for the 1889 World's Fair, offering breathtaking views of the city.</p>
+                    </div>
+                    <div class="card">
+                        <img src="image/paris-louvre.webp" alt="Louvre Museum" loading="lazy">
+                        <h3>Louvre Museum</h3>
+                        <p>The world's largest art museum, home to the Mona Lisa, Venus de Milo, and thousands of other masterpieces.</p>
+                    </div>
+                    <div class="card">
+                        <img src="image/paris-notre-dame.web.jpg" alt="Notre-Dame Cathedral" loading="lazy">
+                        <h3>Notre-Dame Cathedral</h3>
+                        <p>A masterpiece of French Gothic architecture, dating back to the 12th century (currently under restoration).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="weather" class="content-section">
+            <div class="container">
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
+                <div class="weather-container">
+                    <div class="weather-info">
+                        <div class="current-weather">
+                            <img src="image/weather-icon.svg" alt="Weather Icon" class="weather-svg">
+                            <div class="weather-details">
+                                <p class="temperature">15°C</p>
+                                <p class="condition">Partly Cloudy</p>
+                            </div>
+                        </div>
+                        <div class="weather-data">
+                            <p>Wind Speed: <span id="wind-speed">12</span> km/h</p>
+                            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="content-section dark">
+            <div class="container">
+                <h2>Culture & Cuisine</h2>
+                <div class="culture-content">
+                    <div class="culture-text">
+                        <p>Parisian culture is a blend of refined artistry and everyday charm. From world-class museums to cozy corner cafés, the city offers endless opportunities to experience the French "art de vivre" (art of living).</p>
+                        <p>Paris is also a culinary capital, boasting everything from Michelin-starred restaurants to charming bistros and patisseries. Don't miss trying classic French dishes like coq au vin, croissants, escargots, and crème brûlée.</p>
+                        <p>The city's arrondissements (districts) each have their own unique character, from the artistic vibe of Montmartre to the intellectual atmosphere of the Latin Quarter.</p>
+                    </div>
+                    <div class="culture-image">
+                        <img src="image/paris-louvre.webp" alt="French cuisine" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+             
+</svg>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Paris Tourism</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+            <p>All images sourced from <a href="https://pexels.com" target="_blank">Pexels.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
