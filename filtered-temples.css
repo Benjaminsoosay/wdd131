@@ -45,7 +45,7 @@ nav ul {
   list-style: none;
 }
 
-nav ul li a {
+.nav-link {
   padding: 0.5rem 1rem;
   background-color: var(--light-color);
   border: 1px solid var(--primary-color);
@@ -54,14 +54,11 @@ nav ul li a {
   transition: all 0.3s ease;
   text-decoration: none;
   color: var(--text-color);
+  display: inline-block;
 }
 
-nav ul li a:hover {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-nav ul li a.active {
+.nav-link.hovered,
+.nav-link.active {
   background-color: var(--primary-color);
   color: var(--light-color);
 }
@@ -150,7 +147,7 @@ footer {
     align-items: center;
   }
 
-  nav ul li a {
+  .nav-link {
     width: 100%;
     max-width: 200px;
     text-align: center;
