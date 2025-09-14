@@ -35,21 +35,14 @@ h1 {
 nav {
   background-color: var(--secondary-color);
   padding: 1rem;
-  text-align: center;
 }
 
 nav ul {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: block;
 }
 
 .nav-link {
@@ -90,7 +83,7 @@ main {
   transition: transform 0.3s ease;
 }
 
-.temple-card.hovered {
+.temple-card:hover {
   transform: translateY(-5px);
 }
 
@@ -112,13 +105,13 @@ main {
 
 .temple-detail {
   margin-bottom: 0.5rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
+  display: flex;
+  align-items: flex-start;
 }
 
 .temple-detail strong {
   min-width: 120px;
+  display: inline-block;
 }
 
 footer {
@@ -136,7 +129,7 @@ footer {
   }
 
   .temple-detail {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .temple-detail strong {
@@ -150,7 +143,8 @@ footer {
   }
 
   nav ul {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-link {
