@@ -149,10 +149,4 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
-  nav ul li a {
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-  }
 }
