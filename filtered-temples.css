@@ -57,7 +57,6 @@ nav ul {
   display: inline-block;
 }
 
-/* ✅ Replaces :hover with JS-driven class */
 .nav-link.hovered,
 .nav-link.active {
   background-color: var(--primary-color);
