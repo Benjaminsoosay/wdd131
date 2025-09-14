@@ -1,166 +1,181 @@
-// Temple array with the required properties
+/ Temple data array
 const temples = [
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
-  },
-  {
-    templeName: "Manti Utah",
-    location: "Manti, Utah, United States",
-    dedicated: "1888, May, 21",
-    area: 74792,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
-  },
-  {
-    templeName: "Payson Utah",
-    location: "Payson, Utah, United States",
-    dedicated: "2015, June, 7",
-    area: 96630,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-exterior-1416671-wallpaper.jpg"
-  },
-  {
-    templeName: "Yigo Guam",
-    location: "Yigo, Guam",
-    dedicated: "2020, May, 2",
-    area: 6861,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
-  },
-  {
-    templeName: "Washington D.C.",
-    location: "Kensington, Maryland, United States",
-    dedicated: "1974, November, 19",
-    area: 156558,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
-  },
-  {
-    templeName: "Lima Perú",
-    location: "Lima, Perú",
-    dedicated: "1986, January, 10",
-    area: 9600,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
-  },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  // Additional temples (student added)
-  {
-    templeName: "Salt Lake",
+    name: "Salt Lake Temple",
     location: "Salt Lake City, Utah, United States",
-    dedicated: "1893, April, 6",
+    dedicated: "1893-04-06",
     area: 253000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/800x500/salt-lake-temple-37762.jpg",
+    imageAlt: "Salt Lake Temple"
   },
   {
-    templeName: "Rome Italy",
+    name: "Logan Utah Temple",
+    location: "Logan, Utah, United States",
+    dedicated: "1884-05-17",
+    area: 119000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/logan-utah/800x500/logan-temple-768051-wallpaper.jpg",
+    imageAlt: "Logan Utah Temple"
+  },
+  {
+    name: "Manti Utah Temple",
+    location: "Manti, Utah, United States",
+    dedicated: "1888-05-21",
+    area: 100000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/800x500/manti-temple-768192-wallpaper.jpg",
+    imageAlt: "Manti Utah Temple"
+  },
+  {
+    name: "Laie Hawaii Temple",
+    location: "Laie, Oahu, Hawaii",
+    dedicated: "1919-11-27",
+    area: 47000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/laie-hawaii/800x500/laie-temple-775369-wallpaper.jpg",
+    imageAlt: "Laie Hawaii Temple"
+  },
+  {
+    name: "Washington D.C. Temple",
+    location: "Kensington, Maryland, United States",
+    dedicated: "1974-11-19",
+    area: 156000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/800x500/washington_dc_temple-exterior-2.jpeg",
+    imageAlt: "Washington D.C. Temple"
+  },
+  {
+    name: "Portland Oregon Temple",
+    location: "Lake Oswego, Oregon, United States",
+    dedicated: "1989-08-19",
+    area: 88000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/portland-oregon/800x500/portland-temple-768074-wallpaper.jpg",
+    imageAlt: "Portland Oregon Temple"
+  },
+  {
+    name: "Bountiful Utah Temple",
+    location: "Bountiful, Utah, United States",
+    dedicated: "1995-01-08",
+    area: 104000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/800x500/bountiful-temple-766497-wallpaper.jpg",
+    imageAlt: "Bountiful Utah Temple"
+  },
+  // Additional temples
+  {
+    name: "Abuja Nigeria Temple",
+    location: "Abuja, Nigeria",
+    dedicated: "2005-03-07",
+    area: 11500,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/abuja-nigeria/800x500/abuja-nigeria-temple-lds-273999-wallpaper.jpg",
+    imageAlt: "Abuja Nigeria Temple"
+  },
+  {
+    name: "Rome Italy Temple",
     location: "Rome, Italy",
-    dedicated: "2019, March, 10",
+    dedicated: "2019-03-10",
     area: 40000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/800x500/2-Rome-Temple-2190090.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/800x500/Rome-Temple-2163337.jpg",
+    imageAlt: "Rome Italy Temple"
   },
   {
-    templeName: "Copenhagen Denmark",
-    location: "Copenhagen, Denmark",
-    dedicated: "2004, May, 23",
-    area: 25000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/copenhagen-denmark-temple/copenhagen-denmark-temple-16182.jpg"
+    name: "San Diego California Temple",
+    location: "San Diego, California, United States",
+    dedicated: "1993-04-25",
+    area: 72000,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/800x500/san-diego-temple-765109-wallpaper.jpg",
+    imageAlt: "San Diego California Temple"
   }
 ];
 
-// Function to create temple cards
+// DOM elements
+const templeCardsContainer = document.getElementById('temple-cards');
+const navButtons = document.querySelectorAll('.nav-btn');
+
+// Function to format date
+function formatDate(dateString) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString('en-US', options);
+}
+
+// Function to format area with commas
+function formatArea(area) {
+  return area.toLocaleString('en-US');
+}
+
+// Function to create temple card HTML
 function createTempleCard(temple) {
-  const card = document.createElement('div');
-  card.className = 'temple-card';
-  
-  card.innerHTML = `
-    <img src="${temple.imageUrl}" alt="${temple.templeName}" class="temple-img" loading="lazy">
-    <div class="temple-info">
-      <h2 class="temple-name">${temple.templeName}</h2>
-      <p class="temple-detail"><strong>Location:</strong> ${temple.location}</p>
-      <p class="temple-detail"><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p class="temple-detail"><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
+  return `
+    <div class="temple-card">
+      <img src="${temple.imageUrl}" alt="${temple.imageAlt}" class="temple-image" loading="lazy">
+      <div class="temple-info">
+        <h2 class="temple-name">${temple.name}</h2>
+        <p class="temple-detail">
+          <i class="fas fa-map-marker-alt"></i> ${temple.location}
+        </p>
+        <p class="temple-detail">
+          <i class="fas fa-calendar-alt"></i> Dedicated: ${formatDate(temple.dedicated)}
+        </p>
+        <p class="temple-detail">
+          <i class="fas fa-ruler-combined"></i> Area: ${formatArea(temple.area)} sq ft
+        </p>
+      </div>
     </div>
   `;
-  
-  return card;
 }
 
 // Function to display temples based on filter
 function displayTemples(filter = 'home') {
-  const container = document.getElementById('temple-cards');
-  container.innerHTML = '';
+  templeCardsContainer.innerHTML = '';
   
-  let filteredTemples = temples;
+  let filteredTemples = [];
   
-  if (filter === 'old') {
-    filteredTemples = temples.filter(temple => {
-      const year = parseInt(temple.dedicated.split(',')[0]);
-      return year < 1900;
-    });
-  } else if (filter === 'new') {
-    filteredTemples = temples.filter(temple => {
-      const year = parseInt(temple.dedicated.split(',')[0]);
-      return year > 2000;
-    });
-  } else if (filter === 'large') {
-    filteredTemples = temples.filter(temple => temple.area > 90000);
-  } else if (filter === 'small') {
-    filteredTemples = temples.filter(temple => temple.area < 10000);
+  switch(filter) {
+    case 'home':
+      filteredTemples = temples;
+      break;
+    case 'old':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+      break;
+    case 'new':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+      break;
+    case 'large':
+      filteredTemples = temples.filter(temple => temple.area > 90000);
+      break;
+    case 'small':
+      filteredTemples = temples.filter(temple => temple.area < 10000);
+      break;
+    default:
+      filteredTemples = temples;
   }
   
   filteredTemples.forEach(temple => {
-    const card = createTempleCard(temple);
-    container.appendChild(card);
+    templeCardsContainer.innerHTML += createTempleCard(temple);
   });
 }
 
-// Set up filter buttons
-document.getElementById('home').addEventListener('click', function() {
-  setActiveButton(this);
-  displayTemples('home');
+// Set up navigation button event listeners
+navButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    button.classList.add('active');
+    
+    // Display temples based on filter
+    displayTemples(button.id);
+  });
 });
-
-document.getElementById('old').addEventListener('click', function() {
-  setActiveButton(this);
-  displayTemples('old');
-});
-
-document.getElementById('new').addEventListener('click', function() {
-  setActiveButton(this);
-  displayTemples('new');
-});
-
-document.getElementById('large').addEventListener('click', function() {
-  setActiveButton(this);
-  displayTemples('large');
-});
-
-document.getElementById('small').addEventListener('click', function() {
-  setActiveButton(this);
-  displayTemples('small');
-});
-
-function setActiveButton(activeButton) {
-  // Remove active class from all buttons
-  const buttons = document.querySelectorAll('nav button');
-  buttons.forEach(button => button.classList.remove('active'));
-  
-  // Add active class to clicked button
-  activeButton.classList.add('active');
-}
 
 // Initialize page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   // Display all temples initially
   displayTemples();
   
   // Set footer content
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('lastModified').textContent = document.lastModified;
+  
+  // Add Font Awesome for icons (since we're using them in our temple cards)
+  const fontAwesome = document.createElement('link');
+  fontAwesome.rel = 'stylesheet';
+  fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
+  document.head.appendChild(fontAwesome);
 });
