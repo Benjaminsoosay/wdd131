@@ -38,11 +38,13 @@ nav {
 }
 
 nav ul {
+  display: block; /* fallback */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
+  padding: 0;
 }
 
 .nav-link {
@@ -57,7 +59,7 @@ nav ul {
   display: inline-block;
 }
 
-/* ✅ Replaces :hover with JS-driven class */
+/* JS-driven hover/active styling */
 .nav-link.hovered,
 .nav-link.active {
   background-color: var(--primary-color);
@@ -84,7 +86,8 @@ main {
   transition: transform 0.3s ease;
 }
 
-.temple-card:hover {
+/* Optional: JS can also toggle this instead of :hover */
+.temple-card.hovered {
   transform: translateY(-5px);
 }
 
