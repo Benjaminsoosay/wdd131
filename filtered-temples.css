@@ -45,21 +45,21 @@ nav ul {
   list-style: none;
 }
 
-.nav-link {
+nav button {
   padding: 0.5rem 1rem;
   background-color: var(--light-color);
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-decoration: none;
-  color: var(--text-color);
-  display: inline-block;
 }
 
-/* ✅ Replaces :hover with JS-driven class */
-.nav-link.hovered,
-.nav-link.active {
+nav button:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+nav button.active {
   background-color: var(--primary-color);
   color: var(--light-color);
 }
@@ -128,11 +128,11 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
   }
-
+  
   .temple-detail {
     flex-direction: column;
   }
-
+  
   .temple-detail strong {
     margin-bottom: 0.2rem;
   }
@@ -142,15 +142,15 @@ footer {
   .temple-grid {
     grid-template-columns: 1fr;
   }
-
+  
   nav ul {
     flex-direction: column;
     align-items: center;
   }
-
-  .nav-link {
+  
+  nav button {
     width: 100%;
     max-width: 200px;
-    text-align: center;
   }
 }
+
