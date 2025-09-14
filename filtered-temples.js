@@ -1,4 +1,4 @@
-// Temple data array
+/ Temple data array
 const temples = [
   {
     name: "Salt Lake Temple",
