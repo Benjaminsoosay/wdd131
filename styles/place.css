@@ -1,8 +1,8 @@
 /* CSS Variables for consistent theming */
 :root {
-  --primary-color: #0055A4;    /* Blue from French flag */
-  --secondary-color: #EF4135;  /* Red from French flag */
-  --accent-color: #F9F9F9;     /* White from French flag */
+  --primary-color: #0055A4;
+  --secondary-color: #EF4135;
+  --accent-color: #F9F9F9;
   --text-color: #333;
   --light-text: #FFF;
   --dark-bg: #2C3E50;
