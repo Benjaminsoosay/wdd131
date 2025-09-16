@@ -3,76 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 – Dynamic Web Fundamentals – Benjamin Chinonso Soosay Iwuchukwu</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Benjamin Chinonso Soosay Iwuchukwu. Software Developer. Python, SQL, JavaScript. Course landing page with navigation, personal info, and project links.">
-  <meta name="author" content="Benjamin Chinonso Soosay Iwuchukwu">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/base.css">
-
-  <!-- JavaScript -->
-  <script src="scripts/getdates.js" defer></script>
+  <title>Temple Album | Filtered Temples by Era and Size</title>
+  <meta name="description" content="Explore a curated album of temples filtered by construction era and size. Discover historic and modern temples with beautiful architecture.">
+  <meta name="author" content="Daniel Benjamin Chinonso Soosay Iwuchukwu">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
 </head>
 <body>
   <header>
-    <h1><span id="course-title">WDD 131:</span> Dynamic Web Fundamentals</h1>
+    <h1>Temple Album</h1>
     <nav>
       <ul>
-        <li><a href="https://www.linkedin.com/in/benjamin-iwuchukwu-65661a21a" target="_blank">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2.25?lang=eng" target="_blank">Scripture</a></li>
-        <li><a href="#">Final Project</a></li>
+        <li><button id="home" class="active">Home</button></li>
+        <li><button id="old">Old (Before 1900)</button></li>
+        <li><button id="new">New (After 2000)</button></li>
+        <li><button id="large">Large (&gt; 90,000 sq ft)</button></li>
+        <li><button id="small">Small (&lt; 10,000 sq ft)</button></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <div class="card-content">
-        <div class="text-content">
-          <p>My name is <strong>Benjamin Chinonso Soosay Iwuchukwu</strong>. I was born in Imo State, Nigeria, and I now live with my family in <strong>Wetaskiwin, Alberta, Canada</strong>.</p>
-          <p>I am currently studying Software Development at Brigham Young University–Idaho (Online), with an expected graduation in Summer 2026.</p>
-          <p>I love spending quality time with my family, especially watching <strong>hockey</strong> together, which is a big part of Canadian culture. Learning new innovations and applying them to solve real-world problems has always been my number one step to success. My passion for <strong>fintech innovation</strong>, <strong>sustainable technology</strong>, and <strong>software development</strong> drives me forward as I continue to build my career.</p>
-        </div>
-        <img src="image/Benjamin-picture.jpeg" alt="Benjamin Iwuchukwu profile photo" width="200" height="200">
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Wetaskiwin, Alberta</h2>
-      <div class="card-content">
-        <div class="text-content">
-          <p>Wetaskiwin is a city in Alberta, Canada, located approximately 70 kilometres south of the provincial capital of Edmonton. The city name comes from the Cree word wītaskiwinihk, meaning "the hills where peace was made".</p>
-          <p>Wetaskiwin is home to Canada's oldest operating gas station and the Reynolds-Alberta Museum, which preserves and celebrates Alberta's mechanical heritage. The city is surrounded by picturesque prairie landscape and offers a peaceful, family-friendly environment.</p>
-        </div>
-        <img src="image/alberta-canada-wetaskiwin.jpg" alt="Wetaskiwin, Alberta landscape" width="200" height="133">
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Web Dev Resources</h2>
-      <div class="card-content">
-        <ul class="resources-list">
-          <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
-          <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
-          <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
-          <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-          <li><a href="https://github.com/" target="_blank">GitHub</a></li>
-          <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
-        </ul>
-      </div>
-    </section>
+  <main id="temple-cards" class="temple-grid">
+    <!-- Temple cards will be injected here by JavaScript -->
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Benjamin Chinonso Soosay Iwuchukwu | Wetaskiwin, Alberta</p>
-    <p id="lastModified"></p>
+    <p>&copy; <span id="year"></span> | <span id="student">Daniel Benjamin Chinonso Soosay Iwuchukwu</span></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>
