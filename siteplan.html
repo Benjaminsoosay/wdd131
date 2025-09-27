@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Planning Document - TechGadget Reviews</title>
-    <meta name="description" content="Website Planning Document , including ratings, installation date, and feedback.">
+    <meta name="description" content="Submit your product review, including ratings, installation date, and feedback.">
 <meta name="author" content="Daniel Benjamin Soosay Iwuchukwu">
-
     <style>
         /* Color Schema */
         :root {
@@ -108,6 +107,14 @@
             margin-top: 0;
         }
         
+        .wireframe-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
         .wireframe-placeholder {
             background-color: #e0e0e0;
             height: 300px;
@@ -116,6 +123,8 @@
             justify-content: center;
             margin: 10px 0;
             border: 1px dashed #999;
+            color: #666;
+            font-style: italic;
         }
         
         footer {
@@ -138,6 +147,15 @@
                 flex: 1;
                 min-width: 200px;
                 margin: 10px;
+            }
+            
+            .wireframe-container {
+                display: flex;
+                gap: 20px;
+            }
+            
+            .wireframe {
+                flex: 1;
             }
         }
     </style>
@@ -217,31 +235,45 @@
         
         <section id="wireframe">
             <h2>Wireframe</h2>
-            <div class="wireframe">
-                <h3>Mobile View</h3>
-                <div class="wireframe-placeholder">
-                    [Mobile Wireframe Sketch]
+            <div class="wireframe-container">
+                <div class="wireframe">
+                    <h3>Mobile View</h3>
+                    <!-- Using a placeholder image service that provides wireframe-style images -->
+                    <img src="https://via.placeholder.com/300x600/ffffff/666666?text=Mobile+Wireframe" 
+                         alt="Mobile wireframe sketch" 
+                         class="wireframe-image">
+                    <p><strong>Layout Description:</strong> Single column layout with stacked elements:</p>
+                    <ul>
+                        <li>Header with site logo and hamburger menu</li>
+                        <li>Hero section with featured review</li>
+                        <li>Vertical list of recent reviews</li>
+                        <li>Footer with site information</li>
+                    </ul>
                 </div>
-                <p><strong>Layout Description:</strong> Single column layout with stacked elements:</p>
-                <ul>
-                    <li>Header with site logo and hamburger menu</li>
-                    <li>Hero section with featured review</li>
-                    <li>Vertical list of recent reviews</li>
-                    <li>Footer with site information</li>
-                </ul>
+                
+                <div class="wireframe">
+                    <h3>Desktop View</h3>
+                    <!-- Using a placeholder image service that provides wireframe-style images -->
+                    <img src="https://via.placeholder.com/800x600/ffffff/666666?text=Desktop+Wireframe" 
+                         alt="Desktop wireframe sketch" 
+                         class="wireframe-image">
+                    <p><strong>Layout Description:</strong> Multi-column layout with sidebar:</p>
+                    <ul>
+                        <li>Full-width header with navigation menu</li>
+                        <li>Main content area (2/3 width) with featured and recent reviews</li>
+                        <li>Sidebar (1/3 width) with category filters, popular articles, and newsletter signup</li>
+                        <li>Footer with multiple columns for site map, contact info, and social links</li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="wireframe">
-                <h3>Desktop View</h3>
-                <div class="wireframe-placeholder">
-                    [Desktop Wireframe Sketch]
-                </div>
-                <p><strong>Layout Description:</strong> Multi-column layout with sidebar:</p>
+            <!-- Alternative approach with actual wireframe images -->
+            <div style="margin-top: 30px; padding: 15px; background-color: #f0f8ff; border-radius: 5px;">
+                <h3>Alternative Wireframe Images</h3>
+                <p>If the placeholder images above don't load, here are direct links to wireframe examples:</p>
                 <ul>
-                    <li>Full-width header with navigation menu</li>
-                    <li>Main content area (2/3 width) with featured and recent reviews</li>
-                    <li>Sidebar (1/3 width) with category filters, popular articles, and newsletter signup</li>
-                    <li>Footer with multiple columns for site map, contact info, and social links</li>
+                    <li><a href="https://miro.medium.com/v2/resize:fit:1400/1*VYPDpGkzqB9A1Va2o5hfLw.png" target="_blank">Mobile Wireframe Example</a></li>
+                    <li><a href="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2017Q2/what-is-a-wireframe/website-wireframe-example.png" target="_blank">Desktop Wireframe Example</a></li>
                 </ul>
             </div>
         </section>
