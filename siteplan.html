@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Planning Document - TechGadget Reviews</title>
+    <style>
+        /* Color Schema */
+        :root {
+            --primary: #2c3e50;     /* Dark blue for headings */
+            --secondary: #3498db;   /* Blue for accents */
+            --accent: #e74c3c;      /* Red for highlights */
+            --background: #ecf0f1;  /* Light gray for background */
+            --text: #2c3e50;        /* Dark text */
+            --light-text: #7f8c8d;  /* Lighter text */
+        }
+        
+        /* Typography */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: var(--primary);
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: white;
+            margin: 0;
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .primary-color {
+            background-color: var(--primary);
+        }
+        
+        .secondary-color {
+            background-color: var(--secondary);
+        }
+        
+        .accent-color {
+            background-color: var(--accent);
+        }
+        
+        .background-color {
+            background-color: var(--background);
+            color: var(--text);
+            border: 1px solid #ccc;
+        }
+        
+        .wireframe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .wireframe h3 {
+            margin-top: 0;
+        }
+        
+        .wireframe-placeholder {
+            background-color: #e0e0e0;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            border: 1px dashed #999;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--light-text);
+            font-size: 0.9em;
+        }
+        
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .color-schema, .typography {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            
+            .color-item, .font-item {
+                flex: 1;
+                min-width: 200px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Website Planning Document</h1>
+            <p>TechGadget Reviews - Your Guide to Smart Technology</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>TechGadget Reviews</strong></p>
+            <p>This name was chosen because it clearly indicates the website's purpose - providing reviews of technology gadgets. The name is straightforward, easy to remember, and immediately tells visitors what to expect from the site.</p>
+            <p><em>Optional domain availability: techgadgetreviews.com</em></p>
+        </section>
+        
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The TechGadget Reviews website serves as a comprehensive resource for technology enthusiasts and consumers looking for honest, detailed reviews of the latest gadgets. The site will provide:</p>
+            <ul>
+                <li>In-depth product reviews with ratings across multiple categories</li>
+                <li>Comparison tools to help users choose between similar products</li>
+                <li>Buying guides for different technology categories</li>
+                <li>User-submitted reviews and experiences</li>
+                <li>Latest news and trends in the technology gadget space</li>
+            </ul>
+        </section>
+        
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <p>These questions represent what our target audience might ask when visiting the site:</p>
+            <ol>
+                <li>What is the best smartphone under $500 with a good camera and long battery life?</li>
+                <li>How does the latest gaming laptop from Brand X compare to similar models from competitors in terms of performance and value?</li>
+            </ol>
+        </section>
+        
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <div class="color-schema">
+                <div class="color-item">
+                    <div class="color-swatch primary-color">Primary Color<br>#2c3e50</div>
+                    <p>This dark blue will be used for headers, navigation, and important headings.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch secondary-color">Secondary Color<br>#3498db</div>
+                    <p>This blue will be used for links, buttons, and accent elements.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch accent-color">Accent Color<br>#e74c3c</div>
+                    <p>This red will be used for highlights, alerts, and special call-to-action elements.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch background-color">Background Color<br>#ecf0f1</div>
+                    <p>This light gray will be used for the page background and content sections.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="typography">
+            <h2>Typography</h2>
+            <div class="typography">
+                <div class="font-item">
+                    <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;">Headings Font: Georgia</h3>
+                    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">This serif font will be used for all headings (H1-H6) to create a professional, authoritative appearance.</p>
+                </div>
+                <div class="font-item">
+                    <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Body Font: Segoe UI</h3>
+                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">This clean, modern sans-serif font will be used for all body text to ensure excellent readability.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="wireframe">
+            <h2>Wireframe</h2>
+            <div class="wireframe">
+                <h3>Mobile View</h3>
+                <div class="wireframe-placeholder">
+                    [Mobile Wireframe Sketch]
+                </div>
+                <p><strong>Layout Description:</strong> Single column layout with stacked elements:</p>
+                <ul>
+                    <li>Header with site logo and hamburger menu</li>
+                    <li>Hero section with featured review</li>
+                    <li>Vertical list of recent reviews</li>
+                    <li>Footer with site information</li>
+                </ul>
+            </div>
+            
+            <div class="wireframe">
+                <h3>Desktop View</h3>
+                <div class="wireframe-placeholder">
+                    [Desktop Wireframe Sketch]
+                </div>
+                <p><strong>Layout Description:</strong> Multi-column layout with sidebar:</p>
+                <ul>
+                    <li>Full-width header with navigation menu</li>
+                    <li>Main content area (2/3 width) with featured and recent reviews</li>
+                    <li>Sidebar (1/3 width) with category filters, popular articles, and newsletter signup</li>
+                    <li>Footer with multiple columns for site map, contact info, and social links</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Website Planning Document for WDD131 Project | TechGadget Reviews</p>
+        </div>
+    </footer>
+</body>
+</html>
