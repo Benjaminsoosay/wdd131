@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta name="description" content="Submit your product review, including ratings, installation date, and feedback.">
-  <meta name="author" content="Daniel Benjamin Soosay Iwuchukwu">
-  <meta charset="UTF-8">
+    <meta name="author" content="Daniel Benjamin Soosay Iwuchukwu">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
     <style>
@@ -180,6 +180,18 @@
         .back-btn:hover {
             background-color: #2980b9;
         }
+        
+        /* Error message styling */
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-control.error {
+            border-color: #e74c3c;
+        }
     </style>
 </head>
 <body>
@@ -195,6 +207,7 @@
                     <option value="" disabled selected>Select a Product...</option>
                     <!-- Options will be populated by JavaScript -->
                 </select>
+                <div class="error-message" id="productNameError">Please select a product.</div>
             </div>
             
             <!-- Overall Rating -->
@@ -227,12 +240,14 @@
                         <div class="stars">★★★★★</div>
                     </div>
                 </div>
+                <div class="error-message" id="ratingError">Please select a rating.</div>
             </div>
             
             <!-- Date of Installation -->
             <div class="form-group">
                 <label for="installDate" class="required">Date of Installation</label>
                 <input type="date" id="installDate" name="installDate" required>
+                <div class="error-message" id="installDateError">Please select a date.</div>
             </div>
             
             <!-- Useful Features -->
@@ -279,7 +294,7 @@
         </form>
         
         <footer>
-            <p>© 2023 Product Review Form | WDD131 Assignment</p>
+            <p>© 2023 Product Review Form | WDD131 Assignment | Benjamin Soosay Iwuchukwu</p>
         </footer>
     </div>
 
@@ -303,7 +318,61 @@
                 option.textContent = product.name;
                 productSelect.appendChild(option);
             });
+
+            // Form validation
+            const form = document.getElementById('reviewForm');
+            form.addEventListener('submit', function(event) {
+                let isValid = true;
+                
+                // Check product name
+                if (!productSelect.value) {
+                    document.getElementById('productNameError').style.display = 'block';
+                    productSelect.classList.add('error');
+                    isValid = false;
+                } else {
+                    document.getElementById('productNameError').style.display = 'none';
+                    productSelect.classList.remove('error');
+                }
+                
+                // Check rating
+                const ratingSelected = document.querySelector('input[name="rating"]:checked');
+                if (!ratingSelected) {
+                    document.getElementById('ratingError').style.display = 'block';
+                    isValid = false;
+                } else {
+                    document.getElementById('ratingError').style.display = 'none';
+                }
+                
+                // Check installation date
+                const installDate = document.getElementById('installDate');
+                if (!installDate.value) {
+                    document.getElementById('installDateError').style.display = 'block';
+                    installDate.classList.add('error');
+                    isValid = false;
+                } else {
+                    document.getElementById('installDateError').style.display = 'none';
+                    installDate.classList.remove('error');
+                }
+                
+                if (!isValid) {
+                    event.preventDefault();
+                } else {
+                    // Update localStorage with review count
+                    updateReviewCount();
+                }
+            });
+            
+            // Update localStorage with review count
+            function updateReviewCount() {
+                let reviewCount = localStorage.getItem('reviewCount');
+                if (reviewCount) {
+                    reviewCount = parseInt(reviewCount) + 1;
+                } else {
+                    reviewCount = 1;
+                }
+                localStorage.setItem('reviewCount', reviewCount);
+            }
         });
-    <script src="scripts/main.js" defer></script>
+    </script>
 </body>
 </html>
