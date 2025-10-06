@@ -192,13 +192,28 @@
         .form-control.error {
             border-color: #e74c3c;
         }
+        
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+        
+        /* Required field note */
+        .required-note {
+            margin-bottom: 20px;
+            color: #e74c3c;
+            font-size: 14px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Product Review Form -->
-        <form id="reviewForm" method="get" action="review.html">
+        <form id="reviewForm" method="get">
             <h1>Product Review</h1>
+            
+            <p class="required-note">Fields marked with * are required</p>
             
             <!-- Product Name -->
             <div class="form-group">
@@ -293,6 +308,16 @@
             <button type="submit" class="submit-btn">Submit Review</button>
         </form>
         
+        <!-- Confirmation Page -->
+        <div id="confirmationPage" class="confirmation hidden">
+            <h2>Thank You for Your Review!</h2>
+            <p>Your feedback has been submitted successfully.</p>
+            <div class="review-count">
+                Total Reviews Submitted: <span id="reviewCount">0</span>
+            </div>
+            <a href="#" class="back-btn" id="submitAnother">Submit Another Review</a>
+        </div>
+        
         <footer>
             <p>© 2023 Product Review Form | WDD131 Assignment | Benjamin Soosay Iwuchukwu</p>
         </footer>
@@ -308,7 +333,7 @@
             { id: "jj-1900", name: "temp-semblies", averagerating: 5.8 }
         ];
 
-        // Populate product select options
+        // Populate product select options and initialize review count
         document.addEventListener('DOMContentLoaded', function() {
             const productSelect = document.getElementById('productName');
             
@@ -319,9 +344,13 @@
                 productSelect.appendChild(option);
             });
 
-            // Form validation
+            // Display current review count
+            displayReviewCount();
+
+            // Form validation and submission
             const form = document.getElementById('reviewForm');
             form.addEventListener('submit', function(event) {
+                event.preventDefault();
                 let isValid = true;
                 
                 // Check product name
@@ -354,12 +383,25 @@
                     installDate.classList.remove('error');
                 }
                 
-                if (!isValid) {
-                    event.preventDefault();
-                } else {
+                if (isValid) {
                     // Update localStorage with review count
                     updateReviewCount();
+                    
+                    // Hide form and show confirmation
+                    form.classList.add('hidden');
+                    document.getElementById('confirmationPage').classList.remove('hidden');
+                    
+                    // Update the review count display
+                    displayReviewCount();
                 }
+            });
+            
+            // Back button to submit another review
+            document.getElementById('submitAnother').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('confirmationPage').classList.add('hidden');
+                form.classList.remove('hidden');
+                form.reset();
             });
             
             // Update localStorage with review count
@@ -372,7 +414,16 @@
                 }
                 localStorage.setItem('reviewCount', reviewCount);
             }
+            
+            // Display the current review count
+            function displayReviewCount() {
+                let reviewCount = localStorage.getItem('reviewCount');
+                if (!reviewCount) {
+                    reviewCount = 0;
+                }
+                document.getElementById('reviewCount').textContent = reviewCount;
+            }
         });
     </script>
 </body>
-</html>
+</html>          
